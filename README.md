@@ -6,9 +6,9 @@ This project fetches character and episode data from the [Rick and Morty API](ht
 
 ## 📦 Project Structure
 
-- `fetch_data.py`: Fetches character and episode data from the API.
+- `fetch_api.py`: Fetches character and episode data from the API.
 - `process_data.py`: Processes and writes the data to CSV files.
-- `db_connection.py`: Connects to the PostgreSQL database.
+- `database.py`: Connects to the PostgreSQL database.
 - `insert_data.py`: (Optional) Inserts processed CSV data into the database.
 
 ---
@@ -25,19 +25,15 @@ This project fetches character and episode data from the [Rick and Morty API](ht
    python3 -m venv .venv
    source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
 
-3. **Install dependencies**
+3. **Run the fetch script**
    ```bash
-   pip install -r requirements.txt
+   python fetch_api.py
 
-4. **Run the fetch script**
-   ```bash
-   python fetch_data.py
-
-5. **Run the process script**
+4. **Run the process script**
    ```bash
    python process_data.py
 
-6. **(Optional) Insert into database**
+5. **(Optional) Insert into database**
    ```bash
    python insert_data.py
 
